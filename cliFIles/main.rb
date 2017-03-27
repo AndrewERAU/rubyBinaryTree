@@ -22,19 +22,24 @@ def main
    when "e","E"
       puts "Goodbye!"
       exit(0)
-   else # TODO: This is always executing... Why???
+   else
       puts "Invalid input!"
    end
 end
 
 class Node
-   attr_accessor :key, :value, :leftChild, :rightChild
+   attr_accessor :data, :leftChild, :rightChild
 
    def initialize
-      print "Key (enter a string used as the key of the new node): "
-      @key = gets.chomp
-      print "Value (enter a string used as the key of the new node): "
-      @value = gets.chomp
+      @data = setData
+      @leftChild = nil
+      @rightChild = nil
+   end
+
+   def setData
+      print "Data (enter an integer used as the data of the new node): "
+      return gets.chomp
+      # TODO:update, if data is not an integer, say invalid input and ask again for data
    end
 
 end
@@ -50,7 +55,7 @@ class BinaryTree
       # Insertion of first node
       if @head == nil
          print "Inserting first node" # debug update remove
-         print "Key = #{node.key}, Value = #{node.value}"
+         print "Data = #{node.data}"
       else # Insertion of additional nodes
          print "Inserting additional node" # debug update remove
       end #if
