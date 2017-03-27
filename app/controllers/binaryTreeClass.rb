@@ -17,6 +17,8 @@ end
 
 class BinaryTree
 
+   attr_accessor :head, :result
+
    # Constructor called when object is created
    def initialize()
       @head = nil # head is a variable only visible in this class?? update check
@@ -28,19 +30,25 @@ class BinaryTree
       if @head == nil
          #print "Inserting first node" # debug update remove
          #print "Data = #{node.data}"
+         @head = node
       else # Insertion of additional nodes
          #print "Inserting additional node" # debug update remove
       end #if
    end # def insert
 
-   def search(data)
+   def search(inData)
+      if @head.data == inData
+         @result = @head.data
+      else
+         @result = "no"
+      end
    end # def search
 
    def remove(data)
    end # def remove data
 
    def status
-      return "insert"
+      return @result
    end
 
 end #BinaryTree
