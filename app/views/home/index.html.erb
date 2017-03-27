@@ -45,16 +45,16 @@ body {
 </form>
 -->
 
-<%= form_for :home, url:"" do |f| %>
+<%= form_for :binarytree, url: binarytrees_path do |f| %>
   <p class="input center">
     <%= f.text_field :title, placeholder: "ex) 56"%>
   </p>
   <p style="text-align:center;">
-     <%= f.submit "Insert", class: "btn btn-success width" %>
+    <%= f.submit "Insert", class: "btn btn-success width"%>
     <%= f.submit "Search", class: "btn btn-primary width"%>
     <%= f.submit "Remove", class: "btn btn-danger width"%>
   </p>
   <p style="text-align:center; padding: 20px;">
-     <%= f.label @status %>
+     <%= f.label (($binaryTree && $binaryTree.status) || "") %> <!-- prints status without dereferencing null object -->
   </p>
 <% end %>
