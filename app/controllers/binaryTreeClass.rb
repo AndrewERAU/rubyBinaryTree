@@ -26,22 +26,47 @@ class BinaryTree
 
    def insert(data)
       # Insertion of first node
-      node = Node.new(data)
+      newNode = Node.new(data)
+
+      trvPtr = @head
+
       if @head == nil
-         #print "Inserting first node" # debug update remove
-         #print "Data = #{node.data}"
-         @head = node
+         @head = newNode
       else # Insertion of additional nodes
-         #print "Inserting additional node" # debug update remove
+         while trvPtr != nil
+            trvPtrParent = trvPtr
+            if newNode.data < trvPtr.data
+               trvPtr = trvPtr.leftChild
+               if trvPtr == nil
+                  trvPtrParent.leftChild = newNode
+               end #if
+            else
+               trvPtr = trvPtr.rightChild
+               if trvPtr == nil
+                  trvPtrParent.rightChild = newNode
+               end #if
+            end #if
+         end #while
       end #if
    end # def insert
 
-   def search(inData)
-      if @head.data == inData
-         @result = @head.data
+   def search(inData) # set @result
+      trvPtr = @head
+
+      while (trvPtr != nil) && (inData != trvPtr.data)
+         if inData < trvPtr.data
+            trvPtr = trvPtr.leftChild
+         elsif inData > trvPtr.data
+            trvPtr = trvPtr.rightChild
+         end #if
+      end #while
+
+      if trvPtr == nil
+         @result = inData + " not found."
       else
-         @result = "no"
-      end
+         @result = inData + " found!"
+      end #if
+
    end # def search
 
    def remove(data)
