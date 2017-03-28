@@ -21,9 +21,6 @@ body {
 }
 
 </style>
-
-
-<h1 class="center title">Welcome to the Ruby Binary Tree</h1>
 <!--
 <form>
    <div class="row input center">
@@ -44,7 +41,9 @@ body {
 
 </form>
 -->
-
+<body>
+   <div class="container">
+<h1 class="center title">Welcome to the Ruby Binary Tree</h1>
 <%= form_for :binarytree, url: binarytrees_path do |f| %>
   <p class="input center">
     <%= f.text_field :title, placeholder: "ex) 56"%>
@@ -66,6 +65,7 @@ body {
      <!-- prints traversal without dereferencing null object -->
      <%= f.label "Inorder: " + (($binaryTree && $binaryTree.inOrderTraversal($binaryTree.head)) || "") %>
   </p>
-
+  </div>
+</body>
 
 <% end %>
