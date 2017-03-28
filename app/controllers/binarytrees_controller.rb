@@ -4,7 +4,7 @@ class BinarytreesController < ApplicationController
       if params[:commit] == 'Insert'
          $binaryTree.insert(params[:binarytree][:title].to_i) # to_i converts string to int
       elsif params[:commit] == 'Search'
-         $binaryTree.search(params[:binarytree][:title].to_i)
+         $binaryTree.search($binaryTree.head,nil,params[:binarytree][:title].to_i)
       elsif params[:commit] == 'Remove'
          $binaryTree.remove($binaryTree.head,nil,params[:binarytree][:title].to_i)
       end
