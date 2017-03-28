@@ -55,6 +55,17 @@ body {
     <%= f.submit "Remove", class: "btn btn-danger width"%>
   </p>
   <p style="text-align:center; padding: 20px;">
-     <%= f.label (($binaryTree && $binaryTree.status) || "") %> <!-- prints status without dereferencing null object -->
+     <!-- prints status without dereferencing null object -->
+     <%= f.label (($binaryTree && $binaryTree.status) || "") %>
   </p>
+  <p style="text-align:center; padding: 5px;">
+     <!-- prints traversal without dereferencing null object -->
+     <%= f.label "Preorder: " + (($binaryTree && $binaryTree.preOrderTraversal($binaryTree.head)) || "") %>
+  </p>
+  <p style="text-align:center;">
+     <!-- prints traversal without dereferencing null object -->
+     <%= f.label "Inorder: " + (($binaryTree && $binaryTree.inOrderTraversal($binaryTree.head)) || "") %>
+  </p>
+
+
 <% end %>
