@@ -47,7 +47,7 @@ body {
 <h1 class="center title">Welcome to the Ruby Binary Tree</h1>
 <%= form_for :binarytree, url: binarytrees_path do |f| %>
   <p class="input center">
-    <%= f.text_field :title, placeholder: "ex) 56"%>
+    <%= f.text_field :title,type: "number", placeholder: "72"%>
   </p>
   <p style="text-align:center;">
     <%= f.submit "Insert", class: "btn btn-success width"%>
