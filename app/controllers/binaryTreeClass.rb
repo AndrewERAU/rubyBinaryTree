@@ -51,6 +51,7 @@ class BinaryTree
             end #if
          end #while
       end #if
+      @result = data.to_s + " inserted!"
    end # def insert
 
    def search(startNode,parentOfStartNode,inData) # set @result
