@@ -1,5 +1,8 @@
 # rubyBinaryTree
 
+This repository is a Ruby/Rails binary tree website, which can be viewed here
+https://rubybinarytree.herokuapp.com/
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
