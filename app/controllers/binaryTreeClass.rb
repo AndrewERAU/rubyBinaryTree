@@ -7,11 +7,11 @@ class Node
       @rightChild = nil
    end
 
-   def setData
-      print "Data (enter an integer used as the data of the new node): "
-      return gets.chomp
-      # TODO:update, if data is not an integer, say invalid input and ask again for data
-   end
+   # def setData
+   #    print "Data (enter an integer used as the data of the new node): "
+   #    return gets.chomp
+   #    # TODO:update, if data is not an integer, say invalid input and ask again for data
+   # end
 
 end
 

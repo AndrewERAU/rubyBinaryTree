@@ -23,3 +23,6 @@
 
 # My additions
 .DS_Store
+
+#secrect key
+secrets.yml
