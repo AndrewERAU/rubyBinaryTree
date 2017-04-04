@@ -25,4 +25,4 @@
 .DS_Store
 
 #secrect key
-secrets.yml
+secrets_backup.yml
