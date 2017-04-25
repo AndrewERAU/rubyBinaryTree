@@ -3,6 +3,12 @@
 This repository is a Ruby/Rails binary tree website, which can be viewed here
 https://rubybinarytree.herokuapp.com/
 
+-- 3RD-PARTY-LICENSE INFO -------------------------------------------------------------------------------------
+
+This software uses third party libraries that are distributed under their own terms (see LICENSE-3RD-PARTY.md)
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
