@@ -1,5 +1,5 @@
-# Scala Vs Ruby
-### Functional and Object-Oriented Programming
+## Scala Vs Ruby
+#### Functional and Object-Oriented Programming
 <img src="https://raw.githubusercontent.com/AndrewERAU/rubyBinaryTree/master/slideMaterials/HelloWorld.jpg" height="500" width="500" alt="Hello, world">
 ---
 # Overview
