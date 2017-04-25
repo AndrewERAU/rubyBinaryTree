@@ -1,5 +1,5 @@
 # Final Slides
-<img src="https://raw.githubusercontent.com/AndrewERAU/rubyBinaryTree/master/slideMaterials/HelloWorld.jpg" height="200" width="200" alt="Hello, world">
+<img src="https://raw.githubusercontent.com/AndrewERAU/rubyBinaryTree/master/slideMaterials/HelloWorld.jpg" height="500" width="500" alt="Hello, world">
 ![Hello, World](https://raw.githubusercontent.com/AndrewERAU/rubyBinaryTree/master/slideMaterials/HelloWorld.jpg)
 ---
 # Overview
