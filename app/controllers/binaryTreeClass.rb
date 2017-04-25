@@ -25,6 +25,7 @@ class BinaryTree
       @result = ""
       @preorderTraversalResult = ""
       @inorderTraversalResult = ""
+      @postorderTraversalResult = ""
    end
 
    def insert(data)
@@ -154,6 +155,10 @@ class BinaryTree
       @inorderTraversalResult = @inorderTraversalResult + " " + node.data.to_s
    end # def visit
 
+   def visitPostorder(node) # used in traversals
+      @postorderTraversalResult = @postorderTraversalResult + " " + node.data.to_s
+   end # def visit
+
    def preOrderTraversal(node)
       if node == @head # reset result variable to print traversals
          @preorderTraversalResult = ""
@@ -177,7 +182,20 @@ class BinaryTree
       end #if
 
       return @inorderTraversalResult
-   end # def preOrderTraversal
+   end # def inOrderTraversal
+
+   def postOrderTraversal(node)
+      if node == @head # reset result variable to print traversals
+         @postorderTraversalResult = ""
+      end #if
+      if node != nil
+         postOrderTraversal(node.leftChild)
+         postOrderTraversal(node.rightChild)
+         visitPostorder(node)
+      end #if
+
+      return @postorderTraversalResult
+   end # def postOrderTraversal
 
 
 
