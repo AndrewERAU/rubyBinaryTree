@@ -1,3 +1,5 @@
+[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/AndrewERAU/rubyBinaryTree/master?grs=github&t=sky)
+
 # rubyBinaryTree
 
 This repository is a Ruby/Rails binary tree website, which can be viewed here
