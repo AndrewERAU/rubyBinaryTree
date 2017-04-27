@@ -1,5 +1,12 @@
+# .travis.yml
 language: ruby
-ruby:
-   - 2.2.0
 rvm:
-   - ruby
+  - 1.9.3
+env:
+  - DB=postgresql
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake
+before_script:
+  - psql -c 'create database strano_test' -U postgres
