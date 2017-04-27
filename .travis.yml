@@ -3,13 +3,13 @@ language: ruby
 rvm:
   - 2.4.0
 env:
-  - DB=postgresql
+  - DB=pgsql
 script:
   #- RAILS_ENV=test bundle exec rake db:migrate --trace
   #- bundle exec rake db:test:prepare
   - bundle exec rake
 before_script:
-  - cp config/database.yml.travis config/database.yml
+  #- cp config/database.yml.travis config/database.yml
   - RAILS_ENV=test bundle exec rake db:create
   #- psql -c "CREATE USER Andrew WITH PASSWORD 'andrew';" -U postgres
   #- createuser -s -r Andrew
