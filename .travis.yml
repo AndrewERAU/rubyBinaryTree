@@ -10,5 +10,5 @@ script:
   - bundle exec rake
 before_script:
   - psql -c "CREATE USER Andrew WITH PASSWORD 'andrew';" -U postgres
-  - createuser -s -r postgres
+  - createuser -s -r Andrew
   - psql -c 'create database Andrew' -U postgres
