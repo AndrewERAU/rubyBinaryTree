@@ -12,3 +12,4 @@ before_script:
   - psql -c "CREATE USER Andrew WITH PASSWORD 'andrew';" -U postgres
   - createuser -s -r Andrew
   - psql -c 'create database Andrew' -U postgres
+  - psql -c 'create database rubyBinaryTree_test' -U postgres
