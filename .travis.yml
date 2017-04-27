@@ -9,7 +9,9 @@ script:
   #- bundle exec rake db:test:prepare
   - bundle exec rake
 before_script:
-  - psql -c "CREATE USER Andrew WITH PASSWORD 'andrew';" -U postgres
-  - createuser -s -r Andrew
-  - psql -c 'create database Andrew' -U postgres
-  - psql -c 'create database rubyBinaryTree_test' -U postgres
+  - cp config/database.yml.travis config/database.yml
+  - RAILS_ENV=test bundle exec rake db:create
+  #- psql -c "CREATE USER Andrew WITH PASSWORD 'andrew';" -U postgres
+  #- createuser -s -r Andrew
+  #- psql -c 'create database Andrew' -U postgres
+  #- psql -c 'create database rubyBinaryTree_test' -U postgres
