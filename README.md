@@ -1,4 +1,4 @@
-[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/AndrewERAU/rubyBinaryTree/master?grs=github&t=sky)
+[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/AndrewERAU/ScalaVsRuby/master)
 
 # rubyBinaryTree
 
