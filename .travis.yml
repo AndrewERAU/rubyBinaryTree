@@ -1,5 +1,5 @@
 language: ruby
 ruby:
-   - 2.4.0p0
+   - 2.2.0
 rvm:
    - ruby
